@@ -21,3 +21,5 @@ __pycache__/
 .vscode/
 .idea/
 .DS_Store
+build-cuda/
+cuda-keyring_1.1-1_all.deb
