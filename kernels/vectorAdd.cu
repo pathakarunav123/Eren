@@ -1,5 +1,5 @@
 
-#include <cuda_runtime.h>
+#include "eren/cuda_check.cuh"
 
 #include <cstdlib>
 #include <iostream>
@@ -19,15 +19,7 @@ __global__ void vectorAdd(
     }
 }
 
-#define CUDA_CHECK(call)                                      \
-    do {                                                      \
-        cudaError_t err = (call);                             \
-        if (err != cudaSuccess) {                             \
-            std::cerr << "CUDA error: "                       \
-                      << cudaGetErrorString(err) << '\n';     \
-            std::exit(EXIT_FAILURE);                          \
-        }                                                     \
-    } while (0)
+
 
 int main() {
     const int N = 10;

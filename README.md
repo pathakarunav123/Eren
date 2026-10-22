@@ -67,20 +67,25 @@ Run the CUDA vector addition example:
 
 **Completed**
 
-- [x] Initial C++ project and CMake configuration
-- [x] WSL2 CUDA development environment
-- [x] Initial CUDA vector addition kernel
-- [x] GPU execution and output correctness verification
-- [x] GitHub repository initialization
+- [x] C++17/CUDA project configured with CMake
+- [x] WSL2 CUDA development environment and GPU detection
+- [x] GPU capability report implemented
+- [x] CUDA vector-add kernel implemented and verified
+- [x] Reusable CUDA error-checking helper
+- [x] Multi-stage CUDA reduction with CPU-reference validation
+- [x] Reduction benchmark with CUDA-event timing
+- [x] All four CMake targets built successfully
 
-**In progress**
+**Pending**
 
-- [ ] CUDA reduction starter
-- [ ] GPU capability report
-- [ ] Reusable CUDA error-checking helper
-- [ ] Benchmark skeleton
-- [ ] CMake targets for library, CLI, tests, and benchmarks
-- [ ] Phase 0 documentation and clean-build verification
+- [ ] Final README and environment documentation review
+- [ ] Final source and Git cleanup
+- [ ] Final clean-build and correctness verification
+- [ ] Initial Phase 0 Git commit and push
+
+The reduction benchmark has passed correctness checks for input sizes 256, 4,096, 65,536, and 1,000,003. Recorded timings are initial baselines, not optimized performance claims.
+
+The detailed Project EREN roadmap remains the source of truth for phase requirements and exit criteria.
 
 ## Planned Roadmap
 
