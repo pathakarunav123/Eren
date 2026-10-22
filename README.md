@@ -37,27 +37,48 @@ EREN/
 Configure the project:
 
 ```bash
-cmake -S . -B build-cuda \
-  -DCMAKE_CUDA_COMPILER=/usr/local/cuda-13.2/bin/nvcc
+cmake -S . -B build-phase0
 ```
 
-Build:
+Build all targets:
 
 ```bash
-cmake --build build-cuda -j2
+cmake --build build-phase0 -j2
 ```
 
-Run the C++ starter:
+Run the GPU capability report:
 
 ```bash
-./build-cuda/eren
+./build-phase0/eren
 ```
 
-Run the CUDA vector addition example:
+Run the CUDA vector-add example:
 
 ```bash
-./build-cuda/vector_add
+./build-phase0/vector_add
 ```
+
+Run reduction correctness checks:
+
+```bash
+./build-phase0/reduction 257
+./build-phase0/reduction 1000003
+```
+
+Run the reduction benchmark:
+
+```bash
+./build-phase0/reduction_bench
+```
+
+Run the registered CTest checks:
+
+```bash
+ctest --test-dir build-phase0 --output-on-failure
+```
+
+The build directory is generated locally and is excluded from version control by `.gitignore`.
+
 
 > These commands assume the CUDA Toolkit is installed at `/usr/local/cuda-13.2` inside WSL2.
 
@@ -75,6 +96,7 @@ Run the CUDA vector addition example:
 - [x] Multi-stage CUDA reduction with CPU-reference validation
 - [x] Reduction benchmark with CUDA-event timing
 - [x] All four CMake targets built successfully
+- [x] Reusable `eren_core` static library for reduction kernels
 
 **Pending**
 

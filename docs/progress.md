@@ -13,7 +13,9 @@
 - [x] Reduction checked against a CPU reference across multiple input sizes
 - [x] Reduction benchmark implemented with CUDA events
 - [x] Initial reduction benchmark baseline recorded
-- [x] CMake configure and build successful for all four targets
+- [x] CMake configure and build successful for all project targets
+- [x] Four registered CTest checks passing
+- [x] Reusable `eren_core` static library for reduction kernels
 
 ### Pending
 - [ ] Final README and environment documentation review
